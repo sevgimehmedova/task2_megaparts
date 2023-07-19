@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MegaParts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, Helvetica, sans-serif;
+    }
+  .header {
+  height: 80px;
+  display: flex;
+  align-items: center; /* Changed 'flex-direction' to 'align-items' */
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #16242E;
+  border-bottom: 1px solid black;
+  z-index: 2;
+}
+
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      margin-left: 10px; /* Reduced the margin */
+    }
+
+    .middle-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin: 0 15px; /* Adjusted the margins */
+      position: relative;
+    }
+
+    .search-bar {
+      flex: 1;
+      height: 36px;
+      width: 50px;
+      padding-left: 20px;
+      font-size: 16px;
+      border: 1px solid #008AEE; /* Added border */
+      border-radius: 15px;
+      color: white;
+      background-color: transparent;
+    }
+
+    .search-bar::placeholder {
+      font-family: Roboto, Arial;
+      font-size: 16px;
+      background-color: none;
+    }
+
+    .search-button {
+      height: 40px;
+      width: 60px;
+      position: absolute;
+      right: 0;
+      top: 18px;
+      background-color: transparent;
+      border: 0;
+    }
+
+    .search-icon {
+      height: 25px;
+      margin-top: 4px;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      margin-right: 10px; /* Reduced the margin */
+    }
+
+    .user-icon,
+    .youtube-apps-icon,
+    .facebook-icon,
+    .number {
+      width: 44px;
+      height: 44px;
+      padding-right: 10px; /* Reduced the padding */
+    }
+    .bottom_nav {
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.button-autoparts {
+  background-color: #008AEE;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 110px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.button-autoparts:hover {
+    background-color: white;
+    color: black;
+
+}
+.button-redemption {
+  background-color: #F2992F;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 110px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.button-redemption:hover {
+    background-color: white;
+    color: black;
+
+}
+
+.button-auctions {
+  background-color: #2CCACA;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 110px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.button-auctions:hover {
+    background-color: white;
+    color: black;
+
+}
+.button-stock-market {
+  background-color: #33BB5A;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 110px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.button-stock-market:hover {
+    background-color: white;
+    color: black;
+
+}
+.button-games {
+  background-color: #BD5FE9;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 110px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.button-games:hover {
+    background-color: white;
+    color: black;
+
+}
+.button-news {
+  background-color: #EE4700;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 110px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.button-news :hover {
+    background-color: white;
+    color: black;
+
+}
+    .bottom_nav {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      width: 100%;
+      background-color: #1C2D3A;
+      border-bottom: 1px solid black;
+      margin-top: 70px;
+      z-index: 2; 
+    }
+      .purse-icon
+      .like-icon
+      .notification-icon
+      .basket-icon{
+        width: 46px;
+        height: 46px;
+        right: 200px;
+      }
+      .button-query {
+  height: 40px;
+  width: 300px;
+  border-radius: 50px;
+  background-color: #33BB5A;
+  color: white;
+  margin-left:1200px;
+
+}
+
+.left-side-nav{
+  display: flex;
+  width: 45px;
+  padding-left: 15px;
+}
+    /* Filters */
+    .filter {
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+      box-shadow: 0px 0px 11px -3px;
+    }
+
+    .clean-filters {
+      border: 0;
+      background-color: unset;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .filters-top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .filter-inputs {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+
+    .filter-input {
+      padding: 10px 15px;
+      border-radius: 50px;
+      border: 1px solid #008AEE;
+    }
+
+    .filter-apply {
+      display: block;
+      padding: 10px 15px;
+      background-color: #008AEE;
+      color: white;
+      border: unset;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .side-buttons {
+      padding-bottom: 20px;
+      border-bottom: 1px solid;
+    }
+
+    .side-buttons button {
+      width: 100%;
+      padding: 15px 15px;
+      background-color: #008AEE;
+      color: white;
+      border: unset;
+      margin-bottom: 10px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .side-nav {
+      border-bottom: 1px solid;
+    }
+
+    .right-section-filters {
+      position: absolute;
+      right: 0;
+    }
+
+    .add {
+      padding-right: 50px;
+    }
+
+    .add img {
+      margin-top: 20px;
+      width: 100%;
+      height: auto;
+    }
+
+    .other-filters {
+      height: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: fixed;
+      margin-bottom: 60px;
+      margin-left: 320px;
+      padding-top: 30px;
+      position: relative;
+    }
+
+    .left-section-filters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .filters-input {
+      background-color: transparent;
+      color: grey;
+      border-color: grey;
+      margin-bottom: 10px;
+      border-radius: 50px;
+      width: 186px;
+      height: 45px;
+    }
+
+    .refresh-button {
+      color: #008AEE;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.product-images {
+  display: flex;
+  height: 300px;
+  gap: 10px;
+}
+.main-img {
+  flex-grow: 1;
+  border-radius: 10px;
+  position: relative;
+}
+
+.main-img-content {
+  padding: 10px;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+.main-img .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-flex;
+}
+
+.main-img .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  width: 100px;
+  height: 400px;
+}
+
+
+.main-img .pic {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.main-img .picture {
+  padding: 6px 15px;
+  background-color: red;
+  border: 0;
+  border-radius: 50px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+
+.main-img-aside {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-img-aside .img {
+  width: 98px;
+  height: 71px;
+  top: 79px;
+  left: 335px;
+  border-radius: 10px;
+
+}
+
+.product-top-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+  margin-top: 15px;
+}
+
+
+.product-top-info .author {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expires .date {
+  color: blue;
+}
+
+.author {
+  display: flex;
+}
+
+.buy {
+  padding: 7px 15px;
+  color: white;
+  border-radius: 50px;
+  background-color:  #33BB5A;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.extra-info {
+  margin-top: 10px;
+}
+
+.extra-info-row {
+  display: flex;
+  gap: 5px;
+}
+
+.extra-info-row .key {
+  color: blue;
+}
+
+
+.main {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+
+.aside {
+  width: 100%;
+}
+
+@media all and (max-width: 860px) {
+  }
+.aside-buttons {
+  padding-bottom: 20px;
+  border-bottom: 1px solid;
+}
+
+.aside-buttons button {
+  width: 100%;
+  padding: 15px 15px;
+  background-color: #008AEE;
+  color: white;
+  border: unset;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+.side-nav{
+  border-bottom: 1px solid;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+
+}
+
+.info-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.info-1 {
+  width: 197px;
+  height: 16px;
+  top: 451px;
+
+}
+  </style>
+</head>
+    <body>
+  <div class="header">
+    <div class="left-section">
+      <img class="megaparts-logo" src="./Images/Logo.png">
+    </div>
+
+    <div class="middle-section">
+      <input class="search-bar" type="text" placeholder="Search">
+      <button class="search-button">
+        <img class="search-icon" src="./Images/search.png">
+      </button>
+    </div>
+
+    <div class="right-section">
+      <img class="user-icon" src="./Images/elogo.png">
+      <img class="youtube-icon" src="./Images/ytlogo.png">
+      <img class="facebook-icon" src="./Images/fblogo.png">
+      <img class="number" src="./Images/num.png">
+    </div>
+  </div>
+
+  <div class="bottom_nav">
+
+    <button class="button-autoparts">АВТОЧАСТИ</button>
+    <button class="button-redemption">ИЗКУПУВАНЕ</button>
+    <button class="button-auctions">ТЪРГОВЕ</button>
+    <button class="button-stock-market">БОРСА</button>
+    <button class="button-games">ИГРИ</button>
+      <img class="purse-icon" src="./Images/1.png">
+      <img class="like-icon" src="./Images/2.png">
+      <img class="notification-icon" src="./Images/3.png">
+      <img class="basket-icon" src="./Images/4.png">
+    </div>
+
+  <div class="heading">
+    <h1><span class="query">Направи запитване лесно и бързо!</span></h1>
+    <button class="button-query">Направи запитване</button>
+  </div>
+
+  <div>
+    <p class="active-query">1821 активни клиентски запитвания</p>
+  </div>
+
+  <div class="filter">
+    <div class="filters-top">
+      <p class="filters">Филтри</p>
+      <button class="clean-filters">Изчисти филтрите</button>
+    </div>
+
+    <div class="filter-inputs">
+      <select class="filter-input">
+        <option value="Марка">Марка</option>
+      </select>
+
+      <select class="filter-input">
+        <option value="Марка">Категория</option>
+      </select>
+
+      <select class="filter-input">
+        <option value="Марка">Населено място</option>
+      </select>
+
+      <select class="filter-input">
+        <option value="Марка">Модел</option>
+      </select>
+
+      <select class="filter-input">
+        <option value="Марка">Подкатегория</option>
+      </select>
+
+      <button class="filter-apply">Приложи</button>
+    </div>
+  </div>
+
+  <div class="other-filters">
+
+    <div class="left-section-filters">
+      <select class="filters-input">
+        <option value="Марка"> Най- нови</option>
+      </select>
+
+      <P class="refresh-button">
+        Обнови списъка с обяви
+      </P>
+
+    </div>
+
+    <div class="right-section-filters">
+      <img src="./Images/Group 355.png" />
+
+
+    </div>
+</div>
+
+
+
+  <div class="main">
+    <div class="aside">
+      <div class="aside-buttons">
+        <button>
+          Поръчки
+        </button>
+        <button>
+          Моите запитвания
+        </button>
+      </div>
+
+    <div class="left-side-nav">
+     <img src="./Images/Group 158.png">
+  </div>
+    <div class="add">
+      <img src="./Images/Group 179.png" />
+    </div>
+
+    </div>
+     <div class="products">
+      <div class="product">
+
+        <div class="product-top">
+          <div class="product-images">
+            <div class="main-img">
+              <div class="img">
+                <img src="./Images/Rectangle 86.png">
+              </div>
+              <div class="main-img-content">
+                <div class="picture">Примерна снимка</div>
+                <div class="pic">
+                  <img src="./Images/Vector.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="main-img-aside">
+              <div class="img">
+                <img src="./Images/Rectangle 87.png">
+              </div>
+              <div class="img">
+                <img src="./Images/Rectangle 88.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="product-top-info">
+            <div class="authors">
+              <div class="author">M</div>
+              Мартин, Шумен
+            </div>
+
+            <div class="expires">
+              Валидност
+              <span class="date">48:18:16 </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="product-main">
+          <button class="buy">
+            Купувам
+          </button>
+
+          <div class="title">
+            Полуоска за Mercedes-Benz A-Class Hatchback (W168) (07.1997 - 08.2004) A 140 (168.031, 168.131), 82 к.с.,
+            позиция: предна, дясна
+          </div>
+
+          <div class="extra-info">
+            <div class="extra-info-row">
+              <div class="key">
+                Получени оферти:
+              </div>
+              <div class="value">
+                9
+              </div>
+            </div>
+
+            <div class="extra-info-row">
+              <div class="key">
+                Коментар:
+              </div>
+              <div class="value">
+                Няма допълнителна информация.
+              </div>
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="info-2"> Кабатура: 1.4</div>
+            <div> Позиция: Предна, дясна</div>
+          </div>
+
+          <div class="info-1">
+            <div> Скоростна кутия: Ръчни скорости </div>
+            <div> Конски сили: 82</div>
+          </div>
+
+          <button class="button"> Изпрати оферта </button>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="product-top">
+          <div class="product-images">
+            <div class="main-img">
+              <div class="img">
+                <img src="./Images/Rectangle 86.png">
+              </div>
+              <div class="main-img-content">
+                <div class="picture">Примерна снимка</div>
+              <div class="pic">
+                  <img src="./Images/Vector.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="main-img-aside">
+              <div class="img">
+                <img src="./Images/Rectangle 87.png">
+              </div>
+              <div class="img">
+                <img src="./Images/Rectangle 88.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="product-top-info">
+            <div class="authors">
+              <div class="author">M</div>
+              Мартин, Шумен
+            </div>
+
+            <div class="expires">
+              Валидност
+              <span class="date">48:18:16 </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="product-main">
+          <button class="buy">
+            Купувам
+          </button>
+
+          <div class="title">
+            Полуоска за Mercedes-Benz A-Class Hatchback (W168) (07.1997 - 08.2004) A 140 (168.031, 168.131), 82 к.с.,
+            позиция: предна, дясна
+          </div>
+
+          <div class="extra-info">
+            <div class="extra-info-row">
+              <div class="key">
+                Получени оферти:
+              </div>
+              <div class="value">
+                9
+              </div>
+            </div>
+
+            <div class="extra-info-row">
+              <div class="key">
+                Коментар:
+              </div>
+              <div class="value">
+                Няма допълнителна информация.
+              </div>
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="info-2"> Кабатура: 1.4</div>
+            <div> Позиция: Предна, дясна</div>
+          </div>
+
+          <div class="info-1">
+            <div> Скоростна кутия: Ръчни скорости </div>
+            <div> Конски сили: 82</div>
+          </div>
+
+          <button class="button"> Изпрати оферта </button>
+        </div>
+      </div>
+
+      <div class="product">
+
+        <div class="product-top">
+          <div class="product-images">
+            <div class="main-img">
+              <div class="img">
+                <img src="./Images/Rectangle 86.png">
+              </div>
+              <div class="main-img-content">
+                <div class="picture">Примерна снимка</div>
+                <div class="pic">
+                  <img src="./Images/Vector.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="main-img-aside">
+              <div class="img">
+                <img src="./Images/Rectangle 87.png">
+              </div>
+              <div class="img">
+                <img src="./Images/Rectangle 88.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="product-top-info">
+            <div class="authors">
+              <div class="author">M</div>
+              Мартин, Шумен
+            </div>
+
+            <div class="expires">
+              Валидност
+              <span class="date">48:18:16 </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="product-main">
+          <button class="buy">
+            Купувам
+          </button>
+
+          <div class="title">
+            Полуоска за Mercedes-Benz A-Class Hatchback (W168) (07.1997 - 08.2004) A 140 (168.031, 168.131), 82 к.с.,
+            позиция: предна, дясна
+          </div>
+
+          <div class="extra-info">
+            <div class="extra-info-row">
+              <div class="key">
+                Получени оферти:
+              </div>
+              <div class="value">
+                9
+              </div>
+            </div>
+
+            <div class="extra-info-row">
+              <div class="key">
+                Коментар:
+              </div>
+              <div class="value">
+                Няма допълнителна информация.
+              </div>
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="info-2"> Кабатура: 1.4</div>
+            <div> Позиция: Предна, дясна</div>
+          </div>
+
+          <div class="info-1">
+            <div> Скоростна кутия: Ръчни скорости </div>
+            <div> Конски сили: 82</div>
+          </div>
+
+          <button class="button"> Изпрати оферта </button>
+        </div>
+      </div>
+
+      <div class="product">
+
+        <div class="product-top">
+          <div class="product-images">
+            <div class="main-img">
+              <div class="img">
+                <img src="./Images/Rectangle 86.png">
+              </div>
+              <div class="main-img-content">
+                <div class="picture">Примерна снимка</div>
+                <div class="pic">
+                  <img src="./Images/Vector.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="main-img-aside">
+              <div class="img">
+                <img src="./Images/Rectangle 87.png">
+              </div>
+              <div class="img">
+                <img src="./Images/Rectangle 88.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="product-top-info">
+            <div class="authors">
+              <div class="author">M</div>
+              Мартин, Шумен
+            </div>
+
+            <div class="expires">
+              Валидност
+              <span class="date">48:18:16 </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="product-main">
+          <button class="buy">
+            Купувам
+          </button>
+
+          <div class="title">
+            Полуоска за Mercedes-Benz A-Class Hatchback (W168) (07.1997 - 08.2004) A 140 (168.031, 168.131), 82 к.с.,
+            позиция: предна, дясна
+          </div>
+
+          <div class="extra-info">
+            <div class="extra-info-row">
+              <div class="key">
+                Получени оферти:
+              </div>
+              <div class="value">
+                9
+              </div>
+            </div>
+
+            <div class="extra-info-row">
+              <div class="key">
+                Коментар:
+              </div>
+              <div class="value">
+                Няма допълнителна информация.
+              </div>
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="info-2"> Кабатура: 1.4</div>
+            <div> Позиция: Предна, дясна</div>
+          </div>
+
+          <div class="info-1">
+            <div> Скоростна кутия: Ръчни скорости </div>
+            <div> Конски сили: 82</div>
+          </div>
+
+          <button class="button"> Изпрати оферта </button>
+        </div>
+      </div>
+
+      <div class="product">
+
+        <div class="product-top">
+          <div class="product-images">
+            <div class="main-img">
+              <div class="img">
+                <img src="./Images/Rectangle 86.png">
+              </div>
+              <div class="main-img-content">
+                <div class="picture">Примерна снимка</div>
+              <div class="pic">
+                  <img src="./Images/Vector.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="main-img-aside">
+              <div class="img">
+                <img src="./Images/Rectangle 87.png">
+              </div>
+              <div class="img">
+                <img src="./Images/Rectangle 88.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="product-top-info">
+            <div class="authors">
+              <div class="author">M</div>
+              Мартин, Шумен
+            </div>
+
+            <div class="expires">
+              Валидност
+              <span class="date">48:18:16 </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="product-main">
+          <button class="buy">
+            Купувам
+          </button>
+
+          <div class="title">
+            Полуоска за Mercedes-Benz A-Class Hatchback (W168) (07.1997 - 08.2004) A 140 (168.031, 168.131), 82 к.с.,
+            позиция: предна, дясна
+          </div>
+
+          <div class="extra-info">
+            <div class="extra-info-row">
+              <div class="key">
+                Получени оферти:
+              </div>
+              <div class="value">
+                9
+              </div>
+            </div>
+
+            <div class="extra-info-row">
+              <div class="key">
+                Коментар:
+              </div>
+              <div class="value">
+                Няма допълнителна информация.
+              </div>
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="info-2"> Кабатура: 1.4</div>
+            <div> Позиция: Предна, дясна</div>
+          </div>
+
+          <div class="info-1">
+            <div> Скоростна кутия: Ръчни скорости </div>
+            <div> Конски сили: 82</div>
+          </div>
+
+          <button class="button"> Изпрати оферта </button>
+        </div>
+      </div>
+<div class="product">
+
+        <div class="product-top">
+          <div class="product-images">
+            <div class="main-img">
+              <div class="img">
+                <img src="./Images/Rectangle 86.png">
+              </div>
+              <div class="main-img-content">
+                <div class="picture">Примерна снимка</div>
+                <div class="pic">
+                  <img src="./Images/Vector.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="main-img-aside">
+              <div class="img">
+                <img src="./Images/Rectangle 87.png">
+              </div>
+              <div class="img">
+                <img src="./Images/Rectangle 88.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="product-top-info">
+            <div class="authors">
+              <div class="author">M</div>
+              Мартин, Шумен
+            </div>
+
+            <div class="expires">
+              Валидност
+              <span class="date">48:18:16 </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="product-main">
+          <button class="buy">
+            Купувам
+          </button>
+
+          <div class="title">
+            Полуоска за Mercedes-Benz A-Class Hatchback (W168) (07.1997 - 08.2004) A 140 (168.031, 168.131), 82 к.с.,
+            позиция: предна, дясна
+          </div>
+
+          <div class="extra-info">
+            <div class="extra-info-row">
+              <div class="key">
+                Получени оферти:
+              </div>
+              <div class="value">
+                9
+              </div>
+            </div>
+
+            <div class="extra-info-row">
+              <div class="key">
+                Коментар:
+              </div>
+              <div class="value">
+                Няма допълнителна информация.
+              </div>
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="info-2"> Кабатура: 1.4</div>
+            <div> Позиция: Предна, дясна</div>
+          </div>
+
+          <div class="info-1">
+            <div> Скоростна кутия: Ръчни скорости </div>
+            <div> Конски сили: 82</div>
+          </div>
+
+          <button class="button"> Изпрати оферта </button>
+        </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+
+  </div>
+</body>
+</html>
